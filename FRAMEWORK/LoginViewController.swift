@@ -68,7 +68,7 @@ public class LoginViewController: UIViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("ested printed")
         NotificationCenter.default.addObserver(self, selector: #selector(productKey(_:)), name: Notification.Name("ProductKey"), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(identifierType(_:)), name: Notification.Name("IdentifierType"), object: nil)
@@ -81,15 +81,16 @@ public class LoginViewController: UIViewController {
         super.viewWillAppear(true)
         self.setupWebView()
         self.view.addSubview(self.webView)
+        print("tested data")
         let Url = "https://websdk.sawolabs.com/?apiKey=\(Key)&identifierType=\(Identifiers)&webSDKVariant=ios&apiKeySecret=\(Secret)"
-        print(Url)
+        print(Url,"printed url")
 
         if let url = URL(string: Url) {
         let request = URLRequest(url: url)
         self.webView.load(request)
         }
-        print(Key)
-        print(Identifiers)
+        print(Key,"key printed")
+        print(Identifiers,"identifier printed")
         
     }
     

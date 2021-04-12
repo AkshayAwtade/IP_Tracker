@@ -1,0 +1,6 @@
+framework module Pods_IP_Tracker_Akshay_Awtade {
+  umbrella header "Pods-IP_Tracker_Akshay_Awtade-umbrella.h"
+
+  export *
+  module * { export * }
+}
